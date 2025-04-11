@@ -1,26 +1,40 @@
-import React from 'react'
-import ResumeImg from '../assets/resume.png'
-import pdf from '../assets/chinnathambi.pdf'
-
+import React from 'react';
+import ResumeImg from '../assets/resume.png';
+import ResumePDF from '../assets/chinnathambic.pdf';
 
 const Resume = () => {
   return (
-    <section id='resume' className='flex flex-col md:flex-row bg-secondary'>
-      <div className=' py-5 md:w-1/2 bg-secondary px-5 justify-end'>
-        <img src={ResumeImg} />
-      </div>
-      <div className='md:w-1/2 flex justify-center'>
-        <div className=' flex flex-col justify-center text-white'>
-          <h1 className='text-4xl text-white border-b-4 mb-5 w-[140px] font-bold'>Resume</h1>
-          <p className='pb-7'>You can view my Resume <a className=" text-black hover:text-blue-700 transition-colors bn" href={pdf}download="chinna-resume.pdf"  >Download
-          </a></p>
- 
+    <section
+      id="resume"
+      className="bg-gradient-to-br from-[#10002b] via-[#5f27cd] to-[#7d5fff] py-20 px-5 text-white"
+    >
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+        {/* Left Image */}
+        <div className="md:w-1/2 flex justify-center">
+          <img
+            src={ResumeImg}
+            alt="Resume Illustration"
+            className="w-80 md:w-[500px] rounded-xl"
+          />
+        </div>
 
+        {/* Right Content */}
+        <div className="md:w-1/2 flex flex-col items-start gap-6 text-center md:text-left">
+        <h1 className='text-4xl md:text-5xl font-bold text-center mb-10'>
+            <span className="text-pink-400">Resume</span>
+          </h1>
+          <p className="text-lg">You can view my Resume</p>
+          <a
+            href={ResumePDF}
+            download
+            className="bg-white text-[#282c8a] hover:bg-gray-200 font-bold py-3 px-6 rounded-md transition duration-300"
+          >
+            Download
+          </a>
         </div>
       </div>
-
     </section>
-  )
-}
+  );
+};
 
-export default Resume
+export default Resume;
